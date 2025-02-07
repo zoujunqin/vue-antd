@@ -12,6 +12,8 @@ import Components from 'unplugin-vue-components/vite'
 import tailwindcss from 'tailwindcss'
 import autoprefixer from 'autoprefixer'
 
+import SvgLoader from 'vite-svg-loader'
+
 export default defineConfig({
     resolve: {
         alias: {
@@ -24,6 +26,10 @@ export default defineConfig({
         Vue(),
         VueJsx(),
         ReactivityTransform() /* 支持以 $ref 直接定义变量，使用时不需要带出 value */,
+
+        SvgLoader({
+            defaultImport: 'component'
+        }) /* svg 支持以组件的方式引入 */,
 
         Components({
             /* 默认会自动引入 components 下面的组件 */

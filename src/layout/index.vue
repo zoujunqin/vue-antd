@@ -1,19 +1,30 @@
 <script setup lang="jsx">
-import Top from './Top.vue'
-import Left from './Left.vue'
-import Main from './Main.vue'
-import Controls from './Controls.vue'
+    import { provide } from 'vue'
+    import { globalDataProvideKey } from '../keys/provide'
+    import { useGlobalData } from '../hooks/useGlobalData'
 
-defineRender(
-    <div class="flex flex-col h-full">
-        <Top></Top>
+    import Top from './Top.vue'
+    import Main from './Main.vue'
 
-        <div class="flex-1 flex">
-            <Left></Left>
-            <Main class="flex-1 h-full"></Main>
+    /* 提供全局的数据管理 */
+    provide(globalDataProvideKey, useGlobalData())
+
+    defineRender(
+        <div class="layout flex flex-col h-full">
+            <ProConfigProvider>
+                <Top></Top>
+
+                <Main></Main>
+            </ProConfigProvider>
         </div>
-
-        <Controls></Controls>
-    </div>
-)
+    )
 </script>
+
+<style scoped>
+    .layout {
+        background-image: url('@/assets/bg.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>

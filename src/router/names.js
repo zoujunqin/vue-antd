@@ -1,0 +1,5 @@
+export const DASHBOARD = 'dashboard'
+export const EXAMPLE = 'example'
+export const AI = 'ai'
+export const FRONTEND = 'frontend'
+export const BITCOIN = 'bitcoin'

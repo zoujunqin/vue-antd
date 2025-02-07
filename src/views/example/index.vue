@@ -1,17 +1,21 @@
 <script setup lang="jsx">
-import { onMounted } from 'vue'
-import lottie from 'lottie-web'
-import originJson from '@/assets/lottie/origin.json'
+    import AngerSymbolColor from '@/assets/svg/anger_symbol_color.svg?component'
+    import originJson from '@/assets/lottie/origin.json'
 
-onMounted(() => {
-    lottie.loadAnimation({
-        container: document.getElementById('login-lottie'),
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        animationData: originJson
-    })
-})
+    const floatButtonSlots = {
+        icon() {
+            return <span>111</span>
+        }
+    }
 
-defineRender(<div id="login-lottie" class="w-[50px] h-[50px]"></div>)
+    defineRender(
+        <div>
+            <ProLottie animationData={originJson}></ProLottie>
+            <AngerSymbolColor></AngerSymbolColor>
+
+            <ProInput placeholder="测试" onChange={() => console.log('onChange')}></ProInput>
+            <ProButton>测试按钮</ProButton>
+            <ProFloatButton v-slots={floatButtonSlots}></ProFloatButton>
+        </div>
+    )
 </script>
