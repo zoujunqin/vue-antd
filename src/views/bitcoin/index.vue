@@ -1,3 +1,3 @@
 <script setup lang="jsx">
-    defineRender(<div class="bg-white h-full"></div>)
+    defineRender(<div class="h-full"></div>)
 </script>

@@ -13,7 +13,6 @@
         <div class="layout flex flex-col h-full">
             <ProConfigProvider>
                 <Top></Top>
-
                 <Main></Main>
             </ProConfigProvider>
         </div>

@@ -11,7 +11,7 @@
     }
 
     defineRender(
-        <div class="h-[76px] pt-[8px] pb-[8px] pl-[16px] pr-[16px] flex items-center gap-x-[60px] select-none">
+        <div class="h-[76px] pt-[8px] pb-[8px] pl-[16px] pr-[16px] flex items-center gap-x-[60px]">
             <div class="flex flex-nowrap items-center cursor-pointer" onClick={toDashboard}>
                 <Logo class="w-[60px] h-[60px]"></Logo>
                 <span class="text-white text-[24px] font-bold">Half</span>
