@@ -4,6 +4,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:test": "vite --mode test",
+    "dev:staging": "vite --mode development",
+    "dev:production": "vite --mode production",
     "build": "vite build",
     "release": "standard-version",
     "release:major": "standard-version --release-as major",
@@ -14,11 +17,12 @@
     "lint:prettier": "prettier --write \"src/**/*.{js,jsx,json,css,html,md}\""
   },
   "dependencies": {
+    "@ant-design/icons-vue": "7.0.1",
     "@vueuse/core": "12.5.0",
     "ant-design-vue": "4.x",
     "ky": "1.7.4",
     "lottie-web": "5.12.2",
-    "vue": "3.0.4",
+    "vue": "3.5.13",
     "vue-router": "4.5.0"
   },
   "devDependencies": {
@@ -27,7 +31,7 @@
     "@vitejs/plugin-vue": "5.2.1",
     "@vitejs/plugin-vue-jsx": "4.1.1",
     "@vue-macros/reactivity-transform": "1.1.4",
-    "@vue/compiler-sfc": "3.0.4",
+    "@vue/compiler-sfc": "3.5.13",
     "autoprefixer": "10.4.20",
     "commitizen": "4.3.1",
     "husky": "9.1.7",

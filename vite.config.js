@@ -22,21 +22,19 @@ export default defineConfig({
     },
 
     plugins: [
-        VueMacros() /* 支持各种宏定义，如 defineRender */,
+        VueMacros(),
         Vue(),
         VueJsx(),
-        ReactivityTransform() /* 支持以 $ref 直接定义变量，使用时不需要带出 value */,
+        ReactivityTransform(),
 
         SvgLoader({
             defaultImport: 'component'
-        }) /* svg 支持以组件的方式引入 */,
+        }),
 
         Components({
-            /* 默认会自动引入 components 下面的组件 */
             resolvers: [
-                /* 自动引入  ant-design 组件 */
                 AntDesignVueResolver({
-                    importStyle: false // css in js
+                    importStyle: false
                 })
             ]
         })

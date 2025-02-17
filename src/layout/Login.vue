@@ -9,7 +9,7 @@
     const open = useVModel(props, 'open', emits)
 
     defineRender(
-        <ProDrawer v-model:open={open.value} title="登录" placement="right">
+        <ProDrawer v-model:open={open.value} title="Login" placement="right">
             <p>Some contents...</p>
             <p>Some contents...</p>
             <p>Some contents...</p>

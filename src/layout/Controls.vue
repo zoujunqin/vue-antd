@@ -10,9 +10,9 @@
     const open = useVModel(props, 'open', emits)
 
     defineRender(
-        <ProDrawer v-model:open={open.value} title="控制中心" placement="right">
-            <p>当前系统版本：{pkg.version}</p>
-            <p>当前系统环境：{import.meta.env.MODE}</p>
+        <ProDrawer v-model:open={open.value} title="Control Center" placement="right">
+            <p>Current System Version：{pkg.version}</p>
+            <p>Current System Environment：{import.meta.env.MODE}</p>
         </ProDrawer>
     )
 </script>

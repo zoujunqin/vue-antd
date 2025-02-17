@@ -8,13 +8,15 @@
         }
     }
 
+    const testFetch = () => {}
+
     defineRender(
         <div>
             <ProLottie animationData={originJson}></ProLottie>
             <AngerSymbolColor></AngerSymbolColor>
 
             <ProInput placeholder="测试" onChange={() => console.log('onChange')}></ProInput>
-            <ProButton>测试按钮</ProButton>
+            <ProButton onClick={testFetch}>测试 fetch 请求</ProButton>
             <ProFloatButton v-slots={floatButtonSlots}></ProFloatButton>
         </div>
     )

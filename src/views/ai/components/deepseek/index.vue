@@ -1,3 +1,5 @@
 <script setup lang="jsx">
-    defineRender(<div>deepseek</div>)
+    import ChatUI from './ChatUI.vue'
+
+    defineRender(<ChatUI></ChatUI>)
 </script>

@@ -17,7 +17,7 @@
     defineRender(
         <div class="flex items-center gap-x-[20px]">
             <div class="flex items-center gap-x-[6px] text-white opacity-60 hover:opacity-100 cursor-pointer" onClick={openLoginPanel}>
-                <span class="text-white">登录</span>
+                <span class="text-white">Login</span>
                 <UserIcon class="w-[20px] h-[20px]"></UserIcon>
             </div>
 

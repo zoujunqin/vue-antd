@@ -6,7 +6,6 @@
     import Top from './Top.vue'
     import Main from './Main.vue'
 
-    /* 提供全局的数据管理 */
     provide(globalDataProvideKey, useGlobalData())
 
     defineRender(
