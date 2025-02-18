@@ -1,6 +1,6 @@
 <script setup lang="jsx">
     import { useRoute, useRouter } from 'vue-router'
-    import { AI, BITCOIN, FRONTEND } from '../router/names'
+    import { AI, BITCOIN, FRONTEND, JAVASCRIPT } from '../router/names'
 
     const route = useRoute()
     const router = useRouter()
@@ -25,6 +25,13 @@
             handler: () => {
                 router.push({ name: BITCOIN })
             }
+        },
+        {
+            name: 'Javascript',
+            routerName: JAVASCRIPT,
+            handler: () => {
+                router.push({ name: JAVASCRIPT })
+            }
         }
     ]
 
@@ -33,7 +40,7 @@
             {menus.map(menu => {
                 return (
                     <div class="flex items-center gap-x-[6px]" onClick={menu.handler}>
-                        <span class="text-white opacity-60 hover:opacity-100 cursor-pointer" class={{ 'opacity-100': route.name === menu.routerName }}>
+                        <span class="text-white opacity-60 hover:opacity-100 cursor-pointer" class={{ '!opacity-100': route.name === menu.routerName }}>
                             {menu.name}
                         </span>
                     </div>

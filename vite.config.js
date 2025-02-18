@@ -14,6 +14,8 @@ import autoprefixer from 'autoprefixer'
 
 import SvgLoader from 'vite-svg-loader'
 
+import BasicSSL from '@vitejs/plugin-basic-ssl'
+
 export default defineConfig({
     resolve: {
         alias: {
@@ -22,6 +24,8 @@ export default defineConfig({
     },
 
     plugins: [
+        BasicSSL(),
+
         VueMacros(),
         Vue(),
         VueJsx(),

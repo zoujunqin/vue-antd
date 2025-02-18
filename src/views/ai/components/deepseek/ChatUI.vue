@@ -40,7 +40,7 @@
 
     defineRender(
         <div class="flex flex-col items-center justify-center rounded-[6px] h-full">
-            <div class="w-[50%] flex-1 overflow-y-auto flex flex-col items-center gap-y-[40px] p-[20px]">
+            <div v-if={chatStacks.length} class="w-[50%] flex-1 overflow-y-auto flex flex-col items-center gap-y-[40px] p-[20px]">
                 {chatStacks.map(item => {
                     return item.type === QUESTIONER ? (
                         <div class="w-full flex justify-end gap-x-[10px]">
