@@ -1,6 +1,6 @@
 <script setup lang="jsx">
     import { useRoute, useRouter } from 'vue-router'
-    import { AI, BITCOIN, FRONTEND, JAVASCRIPT } from '../router/names'
+    import { AI, BITCOIN, ECMASCRIPT, FRONTEND, JAVASCRIPT, NETWORK_PROTOCOL } from '../router/names'
 
     const route = useRoute()
     const router = useRouter()
@@ -31,6 +31,20 @@
             routerName: JAVASCRIPT,
             handler: () => {
                 router.push({ name: JAVASCRIPT })
+            }
+        },
+        {
+            name: 'Ecmascript',
+            routerName: ECMASCRIPT,
+            handler: () => {
+                router.push({ name: ECMASCRIPT })
+            }
+        },
+        {
+            name: 'Network',
+            routerName: NETWORK_PROTOCOL,
+            handler: () => {
+                router.push({ name: NETWORK_PROTOCOL })
             }
         }
     ]
