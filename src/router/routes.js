@@ -1,5 +1,5 @@
 import Layout from '@/layout/index.vue'
-import { AI, BITCOIN, DASHBOARD, ECMASCRIPT, EXAMPLE, FRONTEND, JAVASCRIPT, NETWORK_PROTOCOL } from './names'
+import { AI, BITCOIN, DASHBOARD, ECMASCRIPT, EXAMPLE, FRONTEND, JAVASCRIPT, NETWORK_PROTOCOL, RESUME, VUE } from './names'
 
 const routes = [
     {
@@ -35,6 +35,16 @@ const routes = [
                 path: 'networkProtocol',
                 name: NETWORK_PROTOCOL,
                 component: () => import('@/views/networkProtocol/index.vue')
+            },
+            {
+                path: 'vue',
+                name: VUE,
+                component: () => import('@/views/vue/index.vue')
+            },
+            {
+                path: 'resume',
+                name: RESUME,
+                component: () => import('@/views/resume/index.vue')
             }
         ]
     },

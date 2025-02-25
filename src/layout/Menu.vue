@@ -1,6 +1,6 @@
 <script setup lang="jsx">
     import { useRoute, useRouter } from 'vue-router'
-    import { AI, BITCOIN, ECMASCRIPT, FRONTEND, JAVASCRIPT, NETWORK_PROTOCOL } from '../router/names'
+    import { AI, BITCOIN, ECMASCRIPT, FRONTEND, JAVASCRIPT, NETWORK_PROTOCOL, RESUME, VUE } from '../router/names'
 
     const route = useRoute()
     const router = useRouter()
@@ -45,6 +45,20 @@
             routerName: NETWORK_PROTOCOL,
             handler: () => {
                 router.push({ name: NETWORK_PROTOCOL })
+            }
+        },
+        {
+            name: 'Vue',
+            routerName: VUE,
+            handler: () => {
+                router.push({ name: VUE })
+            }
+        },
+        {
+            name: 'Resume',
+            routerName: RESUME,
+            handler: () => {
+                router.push({ name: RESUME })
             }
         }
     ]
